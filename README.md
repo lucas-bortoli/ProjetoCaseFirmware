@@ -1,42 +1,30 @@
-# ESP32+Python: Projeto de Case
+# Projeto de Monitoramento Remoto: Integração de ESP32 e Node.js com TypeScript
 
-Projeto para medir temperatura, umidade, corrente e tensão de um sistema, utilizando um sensor SHT40 e um sensor PZEM, conectados a um microcontrolador ESP32, que enviará esses dados para um servidor MQTT, que foi desenvolvido em Python.
+O objetivo deste projeto é coletar e monitorar dados de temperatura, umidade, corrente e tensão de um sistema, utilizando um sensor SHT40 e um sensor PZEM, conectados a um microcontrolador ESP32. O ESP32 transmite esses dados para um servidor MQTT, desenvolvido em Node.js com TypeScript, que armazena essas informações em arquivos CSV.
 
-## Especificações do hardware
+## Componentes e Equipamentos Utilizados
 
 - Microcontrolador ESP32
-- Sensor SHT40
-- Sensor PZEM004Tv30
+- Sensor de temperatura e umidade SHT40
+- Sensor de corrente e tensão PZEM004Tv30
 
-## Requisitos do software
+## Requisitos do Ambiente de Desenvolvimento
 
-- Ambiente de desenvolvimento para ESP32
-- Biblioteca MQTT para ESP32
-- Biblioteca Paho MQTT para Python
-- Python
+- Ambiente de desenvolvimento para o microcontrolador ESP32
+- Biblioteca MQTT para o ESP32
+- Ambiente de desenvolvimento Node.js com TypeScript
 
-## Instruções para uso
+## Etapas para Execução do Projeto
 
-- Instalar as bibliotecas necessárias para o ESP32 e Python
-- Configurar as conexões no código do ESP32 e do Python
-- Inicializar os sensores no código do ESP32
-- Inicializar os arquivos CSV e os escritores no código do Python
-- Conectar o ESP32 ao Wi-Fi e ao broker MQTT
-- Iniciar o servidor do Python
+1. Instalar as bibliotecas necessárias para o ESP32 e Node.js com TypeScript.
+2. Configurar as conexões no código do ESP32 e do Node.js com TypeScript.
+3. Inicializar os sensores no código do ESP32.
+4. Inicializar os arquivos CSV e os escritores no código do Node.js com TypeScript.
+5. Conectar o ESP32 ao Wi-Fi e ao broker MQTT.
+6. Iniciar o servidor do Node.js com TypeScript.
 
-## Funcionamento do projeto
+## Funcionamento do Projeto
 
 - O microcontrolador ESP32 lê os dados dos sensores SHT40 e PZEM.
-- O ESP32 publica esses dados no servidor MQTT.
-- O servidor MQTT, desenvolvido em Python, recebe as mensagens e as grava em arquivos CSV.
-- O servidor também recebe os dados dos sensores, caso existam outros dispositivos conectados, e os grava em arquivos CSV também.
-
-## Observações importantes
-
-- Certifique-se de que o microcontrolador esteja configurado corretamente.
-- Certifique-se de que o Wi-Fi esteja funcionando corretamente e que o broker MQTT esteja acessível.
-- Certifique-se de que o servidor Python esteja rodando corretamente e que os arquivos CSV estejam sendo escritos corretamente.
-
-## Autoria
-
-Isis Alves Nunis Bordinassi
+- O ESP32 envia esses dados para o servidor MQTT.
+- O cliente, desenvolvido em Node.js com TypeScript, recebe as mensagens publicadas no broker e as grava em arquivos CSV.
