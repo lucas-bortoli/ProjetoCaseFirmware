@@ -1,3 +1,4 @@
 Docs/*.html
 Docs/*.latex
 .venv
+node_modules
